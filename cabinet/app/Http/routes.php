@@ -15,4 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+#Route::resource('user', 'UniversalController');
 
+Route::any('{slug}', 'UniversalController@index')->where('slug', '(.*)?');
+
+//Route::any('{slug}', function ($slug) {
+//    return "slug: $slug";
+//})->where('slug', '(.*)?');
