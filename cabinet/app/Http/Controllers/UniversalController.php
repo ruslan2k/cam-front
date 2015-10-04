@@ -15,6 +15,12 @@ class UniversalController extends Controller
      */
     public function index(Request $request)
     {
+
+        $book = R::dispense("book");
+        $book->author = "Santa Claus";
+        $book->title = "Secrets of Christmas";
+        $id = R::store( $book );
+
         return "Index<br>"
             . "<br>url: " . $request->url()
             . "<br>uri: " . $request->path()
