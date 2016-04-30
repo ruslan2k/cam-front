@@ -1,3 +1,7 @@
+SHELL := /bin/bash
+
+include .env
+
 serve:
 	php yii serve	# --port=8888
 
@@ -9,4 +13,5 @@ install_apt:
 	@echo info: \
 	    http://www.yiiframework.com/doc-2.0/guide-start-installation.html
 
-
+backup:
+	time mysqldump -h${DB_HOST} -u${DB_USERNAME} -p${DB_PASSWORD} ${DB_NAME} > _backup/${DB_NAME}-`date +%F_%T`.sql
