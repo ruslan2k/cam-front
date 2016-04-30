@@ -64,4 +64,8 @@ if (YII_ENV_DEV) {
     ];
 }
 
+$config['modules']['user'] = [
+    'class' => 'dektrium\user\Module',
+];
+
 return $config;
