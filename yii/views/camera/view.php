@@ -25,10 +25,14 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <div>
+        <img src="http://www.brs-ltd.co.uk/images/house1.png"></img>
+    </div>
+
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+//            'id',
             'mac',
             'name',
             'user_id',
