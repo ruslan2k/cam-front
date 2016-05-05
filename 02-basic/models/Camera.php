@@ -34,6 +34,9 @@ class Camera extends \yii\db\ActiveRecord
             [['mac', 'name'], 'required'],
             [['mac', 'name'], 'string', 'max' => 255],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
+
+            [['mac', 'name'], 'string'],
+
         ];
     }
 
@@ -44,7 +47,7 @@ class Camera extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'user_id' => 'User ID',
+            //'user_id' => 'User ID',
             'mac' => 'Mac',
             'name' => 'Name',
         ];
