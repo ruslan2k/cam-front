@@ -25,11 +25,15 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
+    <div id="online_view">
+        <img src="http://vidsecurity.ru/pictures/camera_videonabludeniya.jpg"></img>
+    </div>
+
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
             'id',
-            'user_id',
+//            'user_id',
             'mac',
             'name',
         ],
